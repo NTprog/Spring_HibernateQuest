@@ -69,6 +69,18 @@ public class Outputter implements CommandLineRunner {
          for(User myUser : userDao.findAll()) {
              LOG.info(myUser.toString());
          };
+         
+         // UPDATE
+       /*  LOG.info("|******************|");
+         LOG.info(user1.getFirstName() + " " + user1.getLastName() + " évolue ?!?");
+         tempUser2 = userDao.findById(2L).get();
+         tempUser2.setFirstName("Sylvanas");
+         tempUser2.setLastName("Windrunner");
+         tempUser2.setAge(99);
+         user1 = tempUser2;
+         userDao.save(user1);
+         LOG.info("Le personnage a évolué en " + user1.getFirstName() + " " + user1.getLastName()
+         + " de niveau " + user1.getAge());*/
 
          // Supprime le second utilisateur de la BDD
          userDao.deleteById(2L); /* risque de provoquer une erreur si 
