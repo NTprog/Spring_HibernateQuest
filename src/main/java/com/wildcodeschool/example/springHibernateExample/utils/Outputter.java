@@ -71,16 +71,19 @@ public class Outputter implements CommandLineRunner {
          };
          
          // UPDATE
-       /*  LOG.info("|******************|");
-         LOG.info(user1.getFirstName() + " " + user1.getLastName() + " évolue ?!?");
+         LOG.info("|******************|");
+         LOG.info(user1.getFirstName() + " " + user1.getLastName() + " is not a man anymore");
+         LOG.info("******************");
          tempUser2 = userDao.findById(2L).get();
-         tempUser2.setFirstName("Sylvanas");
-         tempUser2.setLastName("Windrunner");
+         tempUser2.setFirstName("Micheline");
+         tempUser2.setLastName("cactu");
          tempUser2.setAge(99);
          user1 = tempUser2;
          userDao.save(user1);
-         LOG.info("Le personnage a évolué en " + user1.getFirstName() + " " + user1.getLastName()
-         + " de niveau " + user1.getAge());*/
+         LOG.info("******************");
+         LOG.info("The character uodated from man to woman " + user1.getFirstName() + " " + user1.getLastName()
+         + " of age " + user1.getAge());
+         LOG.info("******************");
 
          // Supprime le second utilisateur de la BDD
          userDao.deleteById(2L); /* risque de provoquer une erreur si 
